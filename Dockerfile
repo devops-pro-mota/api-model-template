@@ -7,7 +7,7 @@ EXPOSE 80
 FROM mcr.microsoft.com/dotnet/sdk:7.0 AS build
 WORKDIR /src
 COPY ["api-modelo-teste/api-modelo-teste.csproj", "api-modelo-teste/"]
-RUN dotnet restore "api-modelo-teste/api-modelo-teste.csproj"
+#RUN dotnet restore "api-modelo-teste/api-modelo-teste.csproj"
 COPY . .
 WORKDIR "/src/api-modelo-teste"
 RUN dotnet build "api-modelo-teste.csproj" -c Release -o /app/build
