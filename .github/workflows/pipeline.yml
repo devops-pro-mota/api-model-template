@@ -21,7 +21,7 @@ on:
 jobs: 
   call-workflow:
     secrets: inherit            
-    uses: devops-pro-mota/build-templates/.github/workflows/worker-csharp.yml@main
+    uses: devops-pro-mota/build-templates/.github/workflows/api-csharp.yml@main
     with:                       
       environment: ${{ github.event.inputs.environment }}
       namespace: "#namespace#"
